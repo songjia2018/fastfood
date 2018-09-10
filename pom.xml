@@ -18,6 +18,16 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <modules>
+        <module>fastfood-user</module>
+        <module>fastfood-product</module>
+        <module>fastfood-order</module>
+        <module>fastfood-redis</module>
+        <module>fastfood-analysis</module>
+        <module>fastfood-common-utils</module>
+        <module>fastfood-controller</module>
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
