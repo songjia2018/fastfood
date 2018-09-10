@@ -1,9 +1,16 @@
-package com.jonas.fastfood.commonservice.utils;
+package com.jonas.fastfood.controller.utils;
+
+
+import com.jonas.fastfood.commonservice.constants.ResultCode;
+import io.swagger.annotations.ApiParam;
 
 public class JsonResult<T> {
 
+    @ApiParam(name="返回码")
     private int code;
+    @ApiParam(name="返回消息")
     private String message;
+    @ApiParam(name="返回数据")
     private T data;
 
     public JsonResult(){
@@ -43,6 +50,13 @@ public class JsonResult<T> {
     public static JsonResult success(){
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(ResultCode.SUCCESS);
+        return jsonResult;
+    }
+
+    public static JsonResult success(Object data){
+        JsonResult jsonResult = new JsonResult();
+        jsonResult.setCode(ResultCode.SUCCESS);
+        jsonResult.setData(data);
         return jsonResult;
     }
 

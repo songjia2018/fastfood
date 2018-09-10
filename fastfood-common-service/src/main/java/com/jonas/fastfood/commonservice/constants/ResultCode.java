@@ -1,4 +1,4 @@
-package com.jonas.fastfood.commonservice.utils;
+package com.jonas.fastfood.commonservice.constants;
 
 import java.util.ArrayList;
 import java.util.List;
