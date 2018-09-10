@@ -1,12 +1,12 @@
-package com.jonas.fastfood.user;
+package com.jonas.fastfood.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FastUserApplication {
+public class FastfoodProductApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FastUserApplication.class, args);
+        SpringApplication.run(FastfoodProductApplication.class, args);
     }
 }
