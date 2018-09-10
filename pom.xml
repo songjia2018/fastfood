@@ -72,7 +72,7 @@
         <dependency>
             <groupId>com.jonas.fastfood</groupId>
             <artifactId>fastfood-common-service</artifactId>
-            <version>${project.version}</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- AOP -->
         <dependency>
