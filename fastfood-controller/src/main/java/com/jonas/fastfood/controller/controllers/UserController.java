@@ -1,0 +1,7 @@
+package com.jonas.fastfood.controller.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserController {
+}
