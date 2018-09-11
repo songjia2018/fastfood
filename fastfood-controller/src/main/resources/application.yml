@@ -1,4 +1,6 @@
 
+logging.config: classpath:log-dev.xml
+
 server.port: 8081
 
 spring:
