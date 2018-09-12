@@ -4,6 +4,8 @@ package com.jonas.fastfood.controller.utils;
 import com.jonas.fastfood.commonservice.constants.ResultCode;
 import io.swagger.annotations.ApiParam;
 
+import java.net.URL;
+
 public class JsonResult<T> {
 
     @ApiParam(name="返回码")
@@ -54,6 +56,8 @@ public class JsonResult<T> {
     }
 
     public static JsonResult success(Object data){
+        URL url = Thread.currentThread().getContextClassLoader().
+                getResource("/");
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(ResultCode.SUCCESS);
         jsonResult.setData(data);
