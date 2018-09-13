@@ -1,18 +1,11 @@
-package com.jonas.fastfood.controller.utils;
+package com.jonas.fastfood.common.utils;
 
-
-import com.jonas.fastfood.commonservice.constants.ResultCode;
-import io.swagger.annotations.ApiParam;
-
-import java.net.URL;
+import com.jonas.fastfood.common.constants.ResultCode;
 
 public class JsonResult<T> {
 
-    @ApiParam(name="返回码")
     private int code;
-    @ApiParam(name="返回消息")
     private String message;
-    @ApiParam(name="返回数据")
     private T data;
 
     public JsonResult(){
@@ -56,8 +49,6 @@ public class JsonResult<T> {
     }
 
     public static JsonResult success(Object data){
-        URL url = Thread.currentThread().getContextClassLoader().
-                getResource("/");
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(ResultCode.SUCCESS);
         jsonResult.setData(data);

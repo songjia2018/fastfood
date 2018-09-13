@@ -1,15 +1,17 @@
 
 logging.config: classpath:log-dev.xml
 
-server.port: 8808
-
-spring.application.name: fastfood-controller
+spring.application.name: fastbood-user
 
 
 spring.dubbo:
   scan: com.jonas.fastfood
+  protocol:
+    name: dubbo
+    port: 20881
   application:
     name: ${spring.application.name}
     registry:
       address: zookeeper://127.0.0.1:2181
       timeout: 10000
+

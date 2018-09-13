@@ -26,26 +26,15 @@ import java.util.List;
 @Configuration
 @EnableSwagger2
 @ConfigurationProperties
-public class Swagger2{
+public class Swagger2 {
 
     @Bean
     public Docket createRestApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.jonas.fastfood.controller.controllers"))
-                .paths(PathSelectors.any())
-                .build();
+        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.basePackage("com.jonas.fastfood.controller.controllers")).paths(PathSelectors.any()).build();
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .title("Jonas SpringBoot 项目")
-                .description("来自个人开发贡献，翻版必究")
-                .termsOfServiceUrl("http://easonjim.com/")
-                .contact("EasonJim")
-                .version("1.0")
-                .build();
+        return new ApiInfoBuilder().title("FastFood(后台服务)").description("来自个人开").termsOfServiceUrl("https://github.com/songjia2018/fastfood").contact("Jonas").version("1.0").build();
     }
 
 }

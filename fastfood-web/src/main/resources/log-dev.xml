@@ -10,7 +10,7 @@
     <logger name="com.alibaba" level="warn"/>
 
 
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="CONSOLE"/>
     </root>
 </configuration>
