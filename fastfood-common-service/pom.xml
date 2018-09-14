@@ -5,6 +5,34 @@
     <artifactId>fastfood-common-service</artifactId>
     <name>fastfood-common-service</name>
     <description>Demo project for Spring Boot</description>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>5.0.8.BUILD-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jonas.fastfood</groupId>
+            <artifactId>fastfood-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jonas.fastfood</groupId>
+            <artifactId>fastfood-common</artifactId>
+        </dependency>
+    </dependencies>
     <modelVersion>4.0.0</modelVersion>
 
     <parent>

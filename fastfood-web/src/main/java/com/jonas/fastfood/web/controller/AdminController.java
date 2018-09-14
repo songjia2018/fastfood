@@ -2,14 +2,11 @@ package com.jonas.fastfood.web.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.jonas.fastfood.common.constants.Const;
-import com.jonas.fastfood.common.utils.JsonResult;
+import com.jonas.fastfood.common.utils.json.JsonResult;
 import com.jonas.fastfood.commonservice.user.UserService;
-import com.jonas.fastfood.commonservice.user.model.LoginReq;
-import com.jonas.fastfood.commonservice.user.model.UserEntity;
 import com.jonas.fastfood.web.model.request.AdminReq;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
