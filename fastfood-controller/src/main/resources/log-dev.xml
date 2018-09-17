@@ -5,9 +5,11 @@
               value="[%X{receiveTime}%d] [${PID:- } %t\\(%logger\\) : %p]%X{requestInfo}%n%class.%method\\(%file:%line\\)%n%m%n%n"/>
     <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
 
-    <logger name="httpclient" level="warn"/>
+    <logger name="org.apache" level="warn"/>
     <logger name="org.springframework" level="warn"/>
+    <logger name="httpclient" level="warn"/>
     <logger name="com.alibaba" level="warn"/>
+
 
 
     <root level="debug">

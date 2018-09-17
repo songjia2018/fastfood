@@ -2,6 +2,7 @@ package com.jonas.fastfood.controller.controllers;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.jonas.fastfood.common.constants.Const;
+import com.jonas.fastfood.common.utils.LogUtil;
 import com.jonas.fastfood.common.utils.json.JsonResult;
 import com.jonas.fastfood.commonservice.user.UserService;
 import com.jonas.fastfood.commonservice.user.model.LoginReq;
@@ -27,10 +28,13 @@ public class UserController {
     @ApiOperation(value="用户登录",notes="简单的输入用户名和密码")
     @RequestMapping(value = "login",method = RequestMethod.POST)
     public JsonResult login(@RequestBody UserReq user){
+
+        LogUtil.debug("登录前检查："+ user.getUserName() + "/" + user.getPassword());
         LoginReq loginReq = new LoginReq();
         loginReq.setUserName(user.getUserName());
         loginReq.setPassword(user.getPassword());
         UserEntity userEntity = userService.login(loginReq);
+        LogUtil.debug("登录后返回："+ user.getUserName() + "/" + user.getPassword());
         return JsonResult.success(userEntity);
     }
 

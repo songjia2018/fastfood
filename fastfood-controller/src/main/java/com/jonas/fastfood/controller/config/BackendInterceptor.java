@@ -1,6 +1,7 @@
 package com.jonas.fastfood.controller.config;
 
 
+import com.jonas.fastfood.common.mvc.BackendSessionUtil;
 import com.jonas.fastfood.common.utils.LogUtil;
 import com.jonas.fastfood.common.utils.RequestUtils;
 import org.springframework.core.annotation.AnnotationUtils;
@@ -44,13 +45,13 @@ public class BackendInterceptor implements HandlerInterceptor {
         unbindParam();
     }
 
-    /*private void bindParam() {
+    private void bindParam() {
         // 打印日志上下文中的数据
         LogUtil.RequestLogContext logContextInfo = RequestUtils.logContextInfo()
                 .setId(String.valueOf(BackendSessionUtil.getUserId()))
                 .setName(BackendSessionUtil.getUserName());
         LogUtil.bind(logContextInfo);
-    }*/
+    }
 
     private void unbindParam() {
         // 删除打印日志上下文中的数据
