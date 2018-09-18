@@ -22,6 +22,7 @@ com\jonas\fastfood\common\exception\ForbiddenException.class
 com\jonas\fastfood\common\utils\json\JsonUtil$1.class
 com\jonas\fastfood\common\mvc\AppVersion.class
 com\jonas\fastfood\common\encrypt\jwt\Algorithm.class
+com\jonas\fastfood\common\annotation\NeedLogin.class
 com\jonas\fastfood\common\mvc\VersionRequestMappingHandlerMapping.class
 com\jonas\fastfood\common\mvc\AppTokenHandler.class
 com\jonas\fastfood\common\mvc\BackendSessionUtil.class
@@ -33,6 +34,7 @@ com\jonas\fastfood\common\resource\CollectTypeHandlerUtil.class
 com\jonas\fastfood\common\utils\RandomUtil.class
 com\jonas\fastfood\common\encrypt\jwt\JWTVerifier.class
 com\jonas\fastfood\common\utils\DateFormatType.class
+com\jonas\fastfood\common\annotation\NotNeedPermission.class
 com\jonas\fastfood\common\exception\ServiceMustHandleException.class
 com\jonas\fastfood\common\encrypt\Encrypt.class
 com\jonas\fastfood\common\utils\A.class
@@ -46,6 +48,7 @@ com\jonas\fastfood\common\encrypt\jwt\JWTSigner.class
 com\jonas\fastfood\common\mvc\SpringMvc.class
 com\jonas\fastfood\common\mvc\SpringMvc$CustomizeJacksonConverter.class
 com\jonas\fastfood\common\converter\StringToEnumConverter.class
+com\jonas\fastfood\common\annotation\NotNeedLogin.class
 com\jonas\fastfood\common\utils\json\JsonUtil$RenderObjectMapper$1.class
 com\jonas\fastfood\common\utils\LogUtil$RequestLogContext.class
 com\jonas\fastfood\common\exception\ServiceException.class

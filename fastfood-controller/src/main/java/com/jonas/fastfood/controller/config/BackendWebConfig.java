@@ -65,6 +65,7 @@ public class BackendWebConfig extends WebMvcConfigurationSupport {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new BackendInterceptor(BackendWebBean)).addPathPatterns("/**");
+        //registry.addInterceptor(new BackendInterceptor(BackendWebBean)).addPathPatterns("/**");
+        registry.addInterceptor(new BackendInterceptor(BackendWebBean)).addPathPatterns("*.jhtml");
     }
 }

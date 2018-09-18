@@ -1,9 +1,11 @@
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\utils\json\JsonUtil.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\encrypt\jwt\JWTVerifyException.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\utils\MD5Util.java
+E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\annotation\NotNeedPermission.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\utils\RandomUtil.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\mvc\AppVersion.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\utils\LogUtil.java
+E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\annotation\NotNeedLogin.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\mvc\ApiVersionCondition.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\utils\GenerateEnumHandler.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\mvc\ApiVersion.java
@@ -44,6 +46,7 @@ E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\m
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\encrypt\BCrypt.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\converter\StringToNumberConverter.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\utils\DateFormatType.java
+E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\annotation\NeedLogin.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\utils\A.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\http\HttpOkClientUtil.java
 E:\jonas_work\fastfood\fastfood-common\src\main\java\com\jonas\fastfood\common\df.java
