@@ -1,6 +1,9 @@
 package com.jonas.fastfood.commonservice.user.model;
 
-public class UserEntity {
+
+import java.io.Serializable;
+
+public class UserEntity implements Serializable {
 
     private String userName;
     private String password;

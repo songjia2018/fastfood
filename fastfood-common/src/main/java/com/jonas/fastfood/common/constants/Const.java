@@ -9,7 +9,7 @@ public final class Const {
     /**
      * 当前项目的基本包名
      */
-    public static final String BASE_PACKAGE = "com.taiheiot";
+    public static final String BASE_PACKAGE = "com.jonas.fastfood";
 
     /**
      * 指定模块存放枚举的包名

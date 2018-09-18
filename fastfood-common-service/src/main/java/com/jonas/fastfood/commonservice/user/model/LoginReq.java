@@ -1,6 +1,8 @@
 package com.jonas.fastfood.commonservice.user.model;
 
-public class LoginReq {
+import java.io.Serializable;
+
+public class LoginReq implements Serializable {
 
     private String userName;
     private String password;
