@@ -1,9 +1,7 @@
 package com.jonas.fastfood.common.http;
 
 
-
 import com.google.common.io.Files;
-
 import com.jonas.fastfood.common.utils.A;
 import com.jonas.fastfood.common.utils.LogUtil;
 import com.jonas.fastfood.common.utils.U;
@@ -194,8 +192,7 @@ public class HttpOkClientUtil {
     /**
      * 收集上下文中的数据, 以便记录日志
      */
-    private static String collectContext(long start, String method, String url, String params,
-                                         Headers requestHeaders, Headers responseHeaders, String result) {
+    private static String collectContext(long start, String method, String url, String params, Headers requestHeaders, Headers responseHeaders, String result) {
         long ms = System.currentTimeMillis() - start;
         StringBuilder sbd = new StringBuilder();
         sbd.append("OkHttp3 => (").append(method).append(" ").append(url).append(")");

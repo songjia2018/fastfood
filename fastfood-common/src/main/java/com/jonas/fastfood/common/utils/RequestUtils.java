@@ -100,9 +100,7 @@ public final class RequestUtils {
         }
 
         String contentType = request.getHeader("Content-Type");
-        return (U.isNotBlank(contentType) && "application/json".startsWith(contentType))
-                || U.isNotBlank(request.getParameter("_ajax"))
-                || U.isNotBlank(request.getParameter("_json"));
+        return (U.isNotBlank(contentType) && "application/json".startsWith(contentType)) || U.isNotBlank(request.getParameter("_ajax")) || U.isNotBlank(request.getParameter("_json"));
     }
 
     /**

@@ -8,7 +8,7 @@ public class JsonResult<T> {
     private String message;
     private T data;
 
-    public JsonResult(){
+    public JsonResult() {
 
     }
 
@@ -17,7 +17,7 @@ public class JsonResult<T> {
         this.message = message;
     }
 
-    public JsonResult(ResultCode code, String message,T data) {
+    public JsonResult(ResultCode code, String message, T data) {
         this.code = code.code();
         this.message = message;
         this.data = data;
@@ -54,39 +54,39 @@ public class JsonResult<T> {
         this.data = data;
     }
 
-    public static JsonResult success(){
+    public static JsonResult success() {
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(ResultCode.SUCCESS);
         return jsonResult;
     }
 
-    public static JsonResult success(ResultCode resultCode,String msg){
+    public static JsonResult success(ResultCode resultCode, String msg) {
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(ResultCode.SUCCESS);
         jsonResult.setMessage(msg);
         return jsonResult;
     }
 
-    public static JsonResult success(Object data){
+    public static JsonResult success(Object data) {
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(ResultCode.SUCCESS);
         jsonResult.setData(data);
         return jsonResult;
     }
 
-    public static JsonResult success(ResultCode resultCode){
+    public static JsonResult success(ResultCode resultCode) {
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(resultCode);
         return jsonResult;
     }
 
-    public static JsonResult failure(ResultCode resultCode){
+    public static JsonResult failure(ResultCode resultCode) {
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(resultCode);
         return jsonResult;
     }
 
-    public static JsonResult failure(ResultCode resultCode, Object data){
+    public static JsonResult failure(ResultCode resultCode, Object data) {
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(resultCode);
         jsonResult.setData(data);

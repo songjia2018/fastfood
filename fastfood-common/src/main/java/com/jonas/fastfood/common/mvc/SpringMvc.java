@@ -29,8 +29,7 @@ public final class SpringMvc {
 
     public static void handlerConvert(List<HttpMessageConverter<?>> converters) {
         if (A.isNotEmpty(converters)) {
-            converters.removeIf(converter -> converter instanceof StringHttpMessageConverter
-                    || converter instanceof MappingJackson2HttpMessageConverter);
+            converters.removeIf(converter -> converter instanceof StringHttpMessageConverter || converter instanceof MappingJackson2HttpMessageConverter);
         }
         converters.add(new StringHttpMessageConverter(StandardCharsets.UTF_8));
         converters.add(new CustomizeJacksonConverter());

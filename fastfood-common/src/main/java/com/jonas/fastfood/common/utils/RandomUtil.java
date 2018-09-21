@@ -83,20 +83,17 @@ public class RandomUtil {
                             randomstr = randomstr + randomSingle().toString();
                         } else {
                             // get a random char from the first range
-                            randomstr = randomstr
-                                    + randomChar((Character) lower.get(2), (Character) upper.get(2)).toString();
+                            randomstr = randomstr + randomChar((Character) lower.get(2), (Character) upper.get(2)).toString();
                         }
                     } else {
                         // the number was odd
 
                         if (((int) (getFloat() * 100)) % 2 == 0) {
                             // choose a random char from the second range
-                            randomstr = randomstr
-                                    + randomChar((Character) lower.get(1), (Character) upper.get(1)).toString();
+                            randomstr = randomstr + randomChar((Character) lower.get(1), (Character) upper.get(1)).toString();
                         } else {
                             // choose a random char from the third range
-                            randomstr = randomstr
-                                    + randomChar((Character) lower.get(0), (Character) upper.get(0)).toString();
+                            randomstr = randomstr + randomChar((Character) lower.get(0), (Character) upper.get(0)).toString();
                         }
                     }
                 }
@@ -113,12 +110,10 @@ public class RandomUtil {
                         randomstr = randomstr + randomSingle().toString();
                     } else if (((int) (getFloat() * 100)) % 2 == 0) {
                         // get the random char from the first range
-                        randomstr = randomstr
-                                + randomChar((Character) lower.get(1), (Character) upper.get(1)).toString();
+                        randomstr = randomstr + randomChar((Character) lower.get(1), (Character) upper.get(1)).toString();
                     } else {
                         // get the random char from the second range
-                        randomstr = randomstr
-                                + randomChar((Character) lower.get(0), (Character) upper.get(0)).toString();
+                        randomstr = randomstr + randomChar((Character) lower.get(0), (Character) upper.get(0)).toString();
                     }
                 }
             } else if (upper.size() == 1) {
@@ -129,8 +124,7 @@ public class RandomUtil {
                         randomstr = randomstr + randomSingle().toString();
                     } else {
                         // get a random char from the range
-                        randomstr = randomstr
-                                + randomChar((Character) lower.get(0), (Character) upper.get(0)).toString();
+                        randomstr = randomstr + randomChar((Character) lower.get(0), (Character) upper.get(0)).toString();
                     }
                 }
             } else {
@@ -146,16 +140,13 @@ public class RandomUtil {
                 for (int i = 0; i < length.intValue(); i++) {
                     if (((int) (getFloat() * 100)) % 2 == 0) {
                         // get random char from first range
-                        randomstr = randomstr
-                                + randomChar((Character) lower.get(2), (Character) upper.get(2)).toString();
+                        randomstr = randomstr + randomChar((Character) lower.get(2), (Character) upper.get(2)).toString();
                     } else if (((int) (getFloat() * 100)) % 2 == 0) {
                         // get random char form second range
-                        randomstr = randomstr
-                                + randomChar((Character) lower.get(1), (Character) upper.get(1)).toString();
+                        randomstr = randomstr + randomChar((Character) lower.get(1), (Character) upper.get(1)).toString();
                     } else {
                         // get random char from third range
-                        randomstr = randomstr
-                                + randomChar((Character) lower.get(0), (Character) upper.get(0)).toString();
+                        randomstr = randomstr + randomChar((Character) lower.get(0), (Character) upper.get(0)).toString();
                     }
                 }
             } else if (upper.size() == 2) {
@@ -163,12 +154,10 @@ public class RandomUtil {
                 for (int i = 0; i < length.intValue(); i++) {
                     if (((int) (getFloat() * 100)) % 2 == 0) {
                         // get random char from first range
-                        randomstr = randomstr
-                                + randomChar((Character) lower.get(1), (Character) upper.get(1)).toString();
+                        randomstr = randomstr + randomChar((Character) lower.get(1), (Character) upper.get(1)).toString();
                     } else {
                         // get random char from second range
-                        randomstr = randomstr
-                                + randomChar((Character) lower.get(0), (Character) upper.get(0)).toString();
+                        randomstr = randomstr + randomChar((Character) lower.get(0), (Character) upper.get(0)).toString();
                     }
                 }
             } else {
@@ -400,8 +389,7 @@ public class RandomUtil {
                 single[singlecount++] = token.charAt(0);
             }
         }
-        if ((lower == null) && (single == null))
-            setCharset("a-zA-Z0-9");
+        if ((lower == null) && (single == null)) setCharset("a-zA-Z0-9");
     }
 
     public static void main(String[] args) throws Exception {

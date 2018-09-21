@@ -70,9 +70,7 @@ public class JWTVerifier {
      * @throws IllegalStateException when token's structure is invalid
      */
     @SuppressWarnings("unchecked")
-    public Map<String, Object> verify(String token)
-            throws NoSuchAlgorithmException, InvalidKeyException, IllegalStateException,
-            IOException, SignatureException, JWTVerifyException {
+    public Map<String, Object> verify(String token) throws NoSuchAlgorithmException, InvalidKeyException, IllegalStateException, IOException, SignatureException, JWTVerifyException {
         if (token == null || "".equals(token)) {
             throw new IllegalStateException("token not set");
         }

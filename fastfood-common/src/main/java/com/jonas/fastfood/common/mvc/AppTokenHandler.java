@@ -1,7 +1,6 @@
 package com.jonas.fastfood.common.mvc;
 
 
-
 import com.jonas.fastfood.common.constants.Const;
 import com.jonas.fastfood.common.encrypt.Encrypt;
 import com.jonas.fastfood.common.utils.A;

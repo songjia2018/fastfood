@@ -664,8 +664,7 @@ public final class U {
      * 获取后缀(包含点 .)
      */
     public static String getSuffix(String file) {
-        return (isNotBlank(file) && file.contains("."))
-                ? file.substring(file.lastIndexOf(".")) : EMPTY;
+        return (isNotBlank(file) && file.contains(".")) ? file.substring(file.lastIndexOf(".")) : EMPTY;
     }
 
     /**

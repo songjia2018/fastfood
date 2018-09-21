@@ -60,10 +60,7 @@ public class HttpClientUtil {
             sslConnectionSocketFactory = new SSLConnectionSocketFactory(ignoreVerifySSL);
         }
 
-        Registry<ConnectionSocketFactory> registry = RegistryBuilder.<ConnectionSocketFactory>create()
-                .register("http", PlainConnectionSocketFactory.INSTANCE)
-                .register("https", sslConnectionSocketFactory)
-                .build();
+        Registry<ConnectionSocketFactory> registry = RegistryBuilder.<ConnectionSocketFactory>create().register("http", PlainConnectionSocketFactory.INSTANCE).register("https", sslConnectionSocketFactory).build();
 
         CONNECTION_MANAGER = new PoolingHttpClientConnectionManager(registry);
         // 连接池中的最大连接数默认是 20
@@ -101,17 +98,12 @@ public class HttpClientUtil {
     }
 
     private static CloseableHttpClient createHttpClient() {
-        return HttpClients.custom()
-                .setConnectionManager(CONNECTION_MANAGER)
-                .setRetryHandler(HTTP_REQUEST_RETRY_HANDLER).build();
+        return HttpClients.custom().setConnectionManager(CONNECTION_MANAGER).setRetryHandler(HTTP_REQUEST_RETRY_HANDLER).build();
     }
 
     private static void config(HttpRequestBase request) {
         // 配置请求的超时设置
-        RequestConfig requestConfig = RequestConfig.custom()
-                .setConnectionRequestTimeout(TIME_OUT)
-                .setConnectTimeout(TIME_OUT)
-                .setSocketTimeout(TIME_OUT).build();
+        RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(TIME_OUT).setConnectTimeout(TIME_OUT).setSocketTimeout(TIME_OUT).build();
         request.setConfig(requestConfig);
     }
 

@@ -5,11 +5,12 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.ResultSetInternalMethods;
 import com.mysql.jdbc.Statement;
 import com.mysql.jdbc.StatementInterceptor;
-import com.taiheiot.common.util.LogUtil;
-import com.taiheiot.common.util.U;
+import com.jonas.fastfood.common.utils.LogUtil;
+import com.jonas.fastfood.common.utils.U;
 
 import java.sql.SQLException;
 import java.util.Properties;
+
 
 public class ShowSqlInterceptor implements StatementInterceptor {
 
@@ -20,17 +21,14 @@ public class ShowSqlInterceptor implements StatementInterceptor {
     }
 
     @Override
-    public ResultSetInternalMethods preProcess(String sql, Statement statement,
-                                               Connection connection) throws SQLException {
+    public ResultSetInternalMethods preProcess(String sql, Statement statement, Connection connection) throws SQLException {
         TIME.remove();
         TIME.set(System.currentTimeMillis());
         return null;
     }
 
     @Override
-    public ResultSetInternalMethods postProcess(String sql, Statement statement,
-                                                ResultSetInternalMethods resultSetInternalMethods,
-                                                Connection connection) throws SQLException {
+    public ResultSetInternalMethods postProcess(String sql, Statement statement, ResultSetInternalMethods resultSetInternalMethods, Connection connection) throws SQLException {
         if (U.isBlank(sql) && statement != null) {
             sql = statement.toString();
             if (U.isNotBlank(sql) && sql.indexOf(':') > 0) {

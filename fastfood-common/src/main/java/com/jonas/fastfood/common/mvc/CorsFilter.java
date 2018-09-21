@@ -1,7 +1,6 @@
 package com.jonas.fastfood.common.mvc;
 
 
-
 import com.jonas.fastfood.common.constants.Const;
 import com.jonas.fastfood.common.utils.A;
 import com.jonas.fastfood.common.utils.U;
@@ -44,10 +43,7 @@ public class CorsFilter implements Filter {
             }
             if (U.isBlank(response.getHeader(ACCESS_CONTROL_ALLOW_HEADERS))) {
                 // 如果有自定义头, 附加进去, 避免用 *
-                response.addHeader(ACCESS_CONTROL_ALLOW_HEADERS,
-                        "Accept, Accept-Encoding, Accept-Language, Cache-Control, " +
-                                "Connection, Cookie, DNT, Host, User-Agent, Content-Type, Authorization, " +
-                                "X-Requested-With, Origin, Access-Control-Request-headers");
+                response.addHeader(ACCESS_CONTROL_ALLOW_HEADERS, "Accept, Accept-Encoding, Accept-Language, Cache-Control, " + "Connection, Cookie, DNT, Host, User-Agent, Content-Type, Authorization, " + "X-Requested-With, Origin, Access-Control-Request-headers");
             }
             /*
             if (RequestUtils.isIeRequest() && U.isBlank(response.getHeader(P3P))) {
@@ -78,8 +74,7 @@ public class CorsFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-            throws IOException, ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         handlerCors((HttpServletRequest) request, (HttpServletResponse) response);
         chain.doFilter(request, response);
     }

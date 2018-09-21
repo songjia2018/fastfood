@@ -6,6 +6,7 @@ com\jonas\fastfood\common\utils\ApplicationContexts.class
 com\jonas\fastfood\common\converter\StringToNumberConverter.class
 com\jonas\fastfood\common\utils\json\JsonUtil.class
 com\jonas\fastfood\common\utils\SecurityCodeUtil.class
+com\jonas\fastfood\common\sql\SqlFormat$1.class
 com\jonas\fastfood\common\encrypt\jwt\JWTAudienceException.class
 com\jonas\fastfood\common\exception\NotLoginException.class
 com\jonas\fastfood\common\mvc\ApiVersion.class
@@ -15,6 +16,7 @@ com\jonas\fastfood\common\encrypt\jwt\JWTIssuerException.class
 com\jonas\fastfood\common\http\HttpClientUtil.class
 com\jonas\fastfood\common\http\TrustAllCerts.class
 com\jonas\fastfood\common\constants\ResultCode.class
+com\jonas\fastfood\common\sql\SqlFormat.class
 com\jonas\fastfood\common\resource\LoaderClass.class
 com\jonas\fastfood\common\mvc\BackendSessionModel.class
 com\jonas\fastfood\common\encrypt\jwt\JWTSigner$1.class
@@ -29,6 +31,7 @@ com\jonas\fastfood\common\mvc\BackendSessionUtil.class
 com\jonas\fastfood\common\utils\MD5Util.class
 com\jonas\fastfood\common\encrypt\BCrypt.class
 com\jonas\fastfood\common\resource\CollectEnumUtil.class
+com\jonas\fastfood\common\sql\SqlFormat$FormatProcess.class
 com\jonas\fastfood\common\utils\json\JsonResult.class
 com\jonas\fastfood\common\resource\CollectTypeHandlerUtil.class
 com\jonas\fastfood\common\utils\RandomUtil.class
@@ -60,4 +63,4 @@ com\jonas\fastfood\common\utils\U.class
 com\jonas\fastfood\common\utils\RequestUtils.class
 com\jonas\fastfood\common\mvc\ApiVersionCondition.class
 com\jonas\fastfood\common\resource\CollectResourceUtil.class
-com\jonas\fastfood\common\utils\JWTUtil.class
+com\jonas\fastfood\common\sql\ShowSqlInterceptor.class

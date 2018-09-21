@@ -52,8 +52,7 @@ public class BackendSessionUtil {
             BackendSessionModel sessionModel = BackendSessionModel.assemblyData(user, loginSign);
             if (U.isNotBlank(sessionModel)) {
                 if (LogUtil.ROOT_LOG.isDebugEnabled()) {
-                    LogUtil.ROOT_LOG.debug("put ({}) in session({})",
-                            JsonUtil.toJson(sessionModel), RequestUtils.getSession().getId());
+                    LogUtil.ROOT_LOG.debug("put ({}) in session({})", JsonUtil.toJson(sessionModel), RequestUtils.getSession().getId());
                 }
 
                 RequestUtils.getSession().setAttribute(USER, sessionModel);

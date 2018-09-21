@@ -78,11 +78,7 @@ class SqlFormat {
         String lcToken;
 
         private FormatProcess(String sql) {
-            tokens = new StringTokenizer(
-                    sql,
-                    "()+*/-=<>'`\"[]," + " ",
-                    true
-            );
+            tokens = new StringTokenizer(sql, "()+*/-=<>'`\"[]," + " ", true);
         }
 
         private String perform() {
@@ -105,8 +101,7 @@ class SqlFormat {
                     do {
                         t = tokens.nextToken();
                         token += t;
-                    }
-                    while (!"\"".equals(t));
+                    } while (!"\"".equals(t));
                 }
 
                 if (afterByOrSetOrFromOrSelect && ",".equals(token)) {
@@ -239,9 +234,7 @@ class SqlFormat {
             }
             newline();
             afterBeginBeforeEnd = false;
-            afterByOrSetOrFromOrSelect = "by".equals(lcToken)
-                    || "set".equals(lcToken)
-                    || "from".equals(lcToken);
+            afterByOrSetOrFromOrSelect = "by".equals(lcToken) || "set".equals(lcToken) || "from".equals(lcToken);
         }
 
         private void beginNewClause() {
@@ -308,12 +301,7 @@ class SqlFormat {
         private static boolean isFunctionName(String tok) {
             final char begin = tok.charAt(0);
             final boolean isIdentifier = Character.isJavaIdentifierStart(begin) || '"' == begin;
-            return isIdentifier &&
-                    !LOGICAL.contains(tok) &&
-                    !END_CLAUSES.contains(tok) &&
-                    !QUANTIFIERS.contains(tok) &&
-                    !DML.contains(tok) &&
-                    !MISC.contains(tok);
+            return isIdentifier && !LOGICAL.contains(tok) && !END_CLAUSES.contains(tok) && !QUANTIFIERS.contains(tok) && !DML.contains(tok) && !MISC.contains(tok);
         }
 
         private static boolean isWhitespace(String token) {

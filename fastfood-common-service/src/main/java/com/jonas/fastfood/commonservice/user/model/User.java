@@ -9,9 +9,9 @@ import java.util.Date;
 public class User implements Serializable {
     private Long id;
 
-    private String username;
+    private String userName;
 
-    private String userpwd;
+    private String userPwd;
 
     private Date createTime;
 
@@ -25,20 +25,20 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getUserpwd() {
-        return userpwd;
+    public String getUserPwd() {
+        return userPwd;
     }
 
-    public void setUserpwd(String userpwd) {
-        this.userpwd = userpwd;
+    public void setUserPwd(String userPwd) {
+        this.userPwd = userPwd;
     }
 
     public Date getCreateTime() {

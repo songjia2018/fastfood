@@ -17,13 +17,11 @@ class TrustAllCerts implements X509TrustManager {
     static final SSLContext SSL_CONTEXT = createIgnoreVerifySSL();
 
     @Override
-    public void checkClientTrusted(X509Certificate[] paramArrayOfX509Certificate,
-                                   String paramString) throws CertificateException {
+    public void checkClientTrusted(X509Certificate[] paramArrayOfX509Certificate, String paramString) throws CertificateException {
     }
 
     @Override
-    public void checkServerTrusted(X509Certificate[] paramArrayOfX509Certificate,
-                                   String paramString) throws CertificateException {
+    public void checkServerTrusted(X509Certificate[] paramArrayOfX509Certificate, String paramString) throws CertificateException {
     }
 
     @Override

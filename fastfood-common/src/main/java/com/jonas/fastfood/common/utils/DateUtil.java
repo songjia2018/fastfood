@@ -1,7 +1,6 @@
 package com.jonas.fastfood.common.utils;
 
 
-
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 import org.joda.time.format.DateTimeFormat;
@@ -124,11 +123,7 @@ public class DateUtil {
     }
 
     private static DateTime getDateTimeStart(Date date) {
-        return new DateTime(date)
-                .hourOfDay().withMinimumValue()
-                .minuteOfHour().withMinimumValue()
-                .secondOfMinute().withMinimumValue()
-                .millisOfSecond().withMinimumValue();
+        return new DateTime(date).hourOfDay().withMinimumValue().minuteOfHour().withMinimumValue().secondOfMinute().withMinimumValue().millisOfSecond().withMinimumValue();
     }
 
     /**
@@ -142,11 +137,7 @@ public class DateUtil {
     }
 
     private static DateTime getDateTimeEnd(Date date) {
-        return new DateTime(date)
-                .hourOfDay().withMaximumValue()
-                .minuteOfHour().withMaximumValue()
-                .secondOfMinute().withMaximumValue()
-                .millisOfSecond().withMaximumValue();
+        return new DateTime(date).hourOfDay().withMaximumValue().minuteOfHour().withMaximumValue().secondOfMinute().withMaximumValue().millisOfSecond().withMaximumValue();
     }
 
     /**

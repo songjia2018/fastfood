@@ -130,8 +130,7 @@ public final class Encrypt {
             if (LogUtil.ROOT_LOG.isTraceEnabled()) {
                 LogUtil.ROOT_LOG.trace("使用 jwt 解密(" + data + ")时, 数据已过期", e);
             }
-        } catch (NoSuchAlgorithmException | InvalidKeyException | IOException |
-                SignatureException | JWTVerifyException e) {
+        } catch (NoSuchAlgorithmException | InvalidKeyException | IOException | SignatureException | JWTVerifyException e) {
             if (LogUtil.ROOT_LOG.isTraceEnabled()) {
                 LogUtil.ROOT_LOG.trace("使用 jwt 解密(" + data + ")失败", e);
             }

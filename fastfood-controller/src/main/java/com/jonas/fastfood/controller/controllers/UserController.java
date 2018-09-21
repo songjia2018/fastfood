@@ -6,6 +6,7 @@ import com.jonas.fastfood.common.utils.LogUtil;
 import com.jonas.fastfood.common.utils.json.JsonResult;
 import com.jonas.fastfood.commonservice.user.UserService;
 import com.jonas.fastfood.commonservice.user.model.LoginReq;
+import com.jonas.fastfood.commonservice.user.model.User;
 import com.jonas.fastfood.commonservice.user.model.UserEntity;
 import com.jonas.fastfood.controller.model.request.UserReq;
 import io.swagger.annotations.Api;
@@ -27,12 +28,12 @@ public class UserController {
 
     @ApiOperation(value="用户登录",notes="简单的输入用户名和密码")
     @RequestMapping(value = "login",method = RequestMethod.POST)
-    public JsonResult login(@RequestBody UserReq user){
-        LoginReq loginReq = new LoginReq();
-        loginReq.setUserName(user.getUserName());
-        loginReq.setPassword(user.getPassword());
-        UserEntity userEntity = userService.login(loginReq);
-        return JsonResult.success(userEntity);
+    public JsonResult login(@RequestBody UserReq rquestUser){
+        User user = new User();
+        user.setUserName(rquestUser.getUserName());
+        user.setUserPwd(rquestUser.getPassword());
+        user = userService.login(user);
+        return JsonResult.success(user);
     }
 
     @ApiOperation(value="获取用户列表", notes="")

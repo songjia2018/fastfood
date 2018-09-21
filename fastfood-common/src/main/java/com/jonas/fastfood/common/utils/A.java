@@ -180,8 +180,7 @@ public final class A {
     }
 
     @SuppressWarnings("unchecked")
-    /** 构造 LinkedHashMap, 必须保证每两个参数的类型是一致的! 当参数是奇数时, 最后一个 key 将会被忽略 */
-    public static <K, V> LinkedHashMap<K, V> linkedMaps(Object... keysAndValues) {
+    /** 构造 LinkedHashMap, 必须保证每两个参数的类型是一致的! 当参数是奇数时, 最后一个 key 将会被忽略 */ public static <K, V> LinkedHashMap<K, V> linkedMaps(Object... keysAndValues) {
         return (LinkedHashMap<K, V>) maps(newLinkedHashMap(), keysAndValues);
     }
 

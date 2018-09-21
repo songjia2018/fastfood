@@ -1,8 +1,6 @@
 package com.jonas.fastfood.common.mvc;
 
 
-
-
 import org.springframework.web.bind.annotation.Mapping;
 
 import java.lang.annotation.*;
