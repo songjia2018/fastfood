@@ -5,6 +5,17 @@ package com.jonas.fastfood.common.constants;
  */
 public final class Const {
 
+    /**
+     * 当前模块名
+     */
+    public static final String MODULE_NAME_USER = "user";
+
+    /**
+     * 当前模块说明. 当用在文档中时有用
+     */
+    public static final String MODULE_INFO_USER = MODULE_NAME_USER + "-用户";
+
+
     // ========== load ==========
     /**
      * 当前项目的基本包名
