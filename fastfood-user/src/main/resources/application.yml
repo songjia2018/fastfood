@@ -3,6 +3,21 @@ logging.config: classpath:log-dev.xml
 
 spring.application.name: fastbood-user
 
+database:
+  url:  jdbc:mysql://43.229.153.43:3306/fastfood?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.jonas.fastfood.common.sql.ShowSqlInterceptor
+  userName: root
+  password: jonas2018
+  initialSize: 1
+  minIdle: 1
+  maxActive: 1
+  maxWait: 60000
+  timeBetweenEvictionRunsMillis: 60000
+  minEvictableIdleTimeMillis: 300000
+  validationQuery: SELECT 'x'
+  testWhileIdle: true
+  testOnBorrow: false
+  testOnReturn: false
+  filters: stat,wall
 
 spring.dubbo:
   scan: com.jonas.fastfood
