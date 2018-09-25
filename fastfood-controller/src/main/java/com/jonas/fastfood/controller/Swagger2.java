@@ -34,7 +34,7 @@ public class Swagger2 {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("FastFood(后台服务)").description("来自个人开发").termsOfServiceUrl("https://github.com/songjia2018/fastfood").contact("Jonas").version("1.0").build();
+        return new ApiInfoBuilder().title("FastFood-接口文档").description("来自个人开发").termsOfServiceUrl("https://github.com/songjia2018/fastfood").contact("Jonas").version("1.0").build();
     }
 
 }
