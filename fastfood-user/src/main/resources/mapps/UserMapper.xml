@@ -16,7 +16,7 @@
     from fsfd_user
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <select id="selectByCondtion" parameterType="java.lang.Long" resultMap="BaseResultMap">
+  <select id="selectByCondtion" parameterType="com.jonas.fastfood.commonservice.user.model.User" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from fsfd_user
