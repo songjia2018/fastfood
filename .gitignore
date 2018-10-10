@@ -23,3 +23,6 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+fastfood-common/target/classes/com/jonas/fastfood/common/mvc/BackendSessionModel.class
+fastfood-common/target/classes/com/jonas/fastfood/common/mvc/BackendSessionModel.class
+*.class

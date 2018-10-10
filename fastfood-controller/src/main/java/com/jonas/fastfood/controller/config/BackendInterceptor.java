@@ -29,6 +29,13 @@ public class BackendInterceptor implements HandlerInterceptor {
             LogUtil.ROOT_LOG.info("***request url="+request.getRequestURL());
         }
         bindParam();
+        String url = request.getRequestURL().toString();
+        String requestUrl = request.getRequestURI().replace(request.getContextPath(), "");
+        //过滤接口文档过来的请求
+        if(requestUrl.contains("swagger"))
+        {
+            return true;
+        }
         checkLoginAndPermission(handler);
         return true;
     }

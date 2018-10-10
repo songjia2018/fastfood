@@ -20,11 +20,16 @@ public class BackendWebBean {
      * 获取 session 用户存到缓存中的登录标识
      */
     public String getLoginSignInCache() {
-        if (RequestUtils.isMobileRequest()) {
+/*        if (RequestUtils.isMobileRequest()) {
             Long userId = BackendSessionUtil.getUserId();
             if (U.greater0(userId)) {
                 return cacheService.get(LOGIN_SIGN_PREFIX + userId);
             }
+        }
+        return U.EMPTY;*/
+        Long userId = BackendSessionUtil.getUserId();
+        if (U.greater0(userId)) {
+            return cacheService.get(LOGIN_SIGN_PREFIX + userId);
         }
         return U.EMPTY;
     }
@@ -35,11 +40,14 @@ public class BackendWebBean {
      * @see BackendSessionUtil#whenLogin(Object, String)
      */
     public String addLoginSignInCache(Long userId) {
-        if (RequestUtils.isMobileRequest()) {
+        /*if (RequestUtils.isMobileRequest()) {
             String loginSign = U.uuid();
             cacheService.set(LOGIN_SIGN_PREFIX + userId, loginSign);
             return loginSign;
         }
-        return U.EMPTY;
+        return U.EMPTY;*/
+        String loginSign = U.uuid();
+        cacheService.set(LOGIN_SIGN_PREFIX + userId, loginSign);
+        return loginSign;
     }
 }

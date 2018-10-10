@@ -55,10 +55,13 @@ class BackendSessionModel implements Serializable {
      */
     boolean wasLogin(boolean isMobile, String loginSignInCache) {
         // 如果是移动端, 当前 session 中的 登录标识值 必须要跟 缓存 中的一样
-        if (isMobile) {
+        /*if (isMobile) {
             if (U.isBlank(loginSignInCache) || U.isBlank(loginSign) || !loginSignInCache.equals(loginSign)) {
                 throw new NotLoginException("您的账号已经由别的设备登录, 当前账号已经退出");
             }
+        }*/
+        if (U.isBlank(loginSignInCache) || U.isBlank(loginSign) || !loginSignInCache.equals(loginSign)) {
+            throw new NotLoginException("您的账号已经由别的设备登录, 当前账号已经退出");
         }
         return !Objects.equals(DEFAULT_ID, id) && !Objects.equals(DEFAULT_NAME, name);
     }

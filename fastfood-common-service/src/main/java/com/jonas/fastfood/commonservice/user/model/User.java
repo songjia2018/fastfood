@@ -15,6 +15,8 @@ public class User implements Serializable {
 
     private Date createTime;
 
+    private String token;
+
     private static final long serialVersionUID = 1L;
 
     public Long getId() {
@@ -47,5 +49,13 @@ public class User implements Serializable {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

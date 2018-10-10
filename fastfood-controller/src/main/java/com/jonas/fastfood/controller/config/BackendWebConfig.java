@@ -8,6 +8,7 @@ import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
@@ -53,6 +54,8 @@ public class BackendWebConfig extends WebMvcConfigurationSupport {
         SpringMvc.handlerConvert(converters);
     }
 
+
+
    /* @Override
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
         SpringMvc.handlerArgument(argumentResolvers);
@@ -65,7 +68,12 @@ public class BackendWebConfig extends WebMvcConfigurationSupport {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        //registry.addInterceptor(new BackendInterceptor(BackendWebBean)).addPathPatterns("/**");
-        registry.addInterceptor(new BackendInterceptor(BackendWebBean)).addPathPatterns("*.jhtml");
+        registry.addInterceptor(new BackendInterceptor(BackendWebBean)).addPathPatterns("/**");
+        //registry.addInterceptor(new BackendInterceptor(BackendWebBean)).addPathPatterns("*.jhtml");
+       /* String[] addPatterns = {"/**"}; //默认拦截所有接口
+        String[] excludePatterns = {"/swagger-ui","/static","webjars","/swagger-resources"}; //默认排除拦截的接口
+        InterceptorRegistration interceptorRegistration = registry.addInterceptor(new BackendInterceptor(BackendWebBean));
+        interceptorRegistration.addPathPatterns(addPatterns);*/
+        //interceptorRegistration.excludePathPatterns(excludePatterns);
     }
 }
