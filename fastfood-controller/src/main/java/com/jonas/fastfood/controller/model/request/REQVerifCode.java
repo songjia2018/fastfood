@@ -5,15 +5,15 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-@ApiModel(value="验证码")
+@ApiModel(value = "验证码")
 public class REQVerifCode {
-    @ApiModelProperty(name="width",value = "图片宽度")
+    @ApiModelProperty(name = "width", value = "图片宽度")
     private String width;
-    @ApiModelProperty(name="height",value = "图片高度")
+    @ApiModelProperty(name = "height", value = "图片高度")
     private String height;
-    @ApiModelProperty(name="count",value = "验证码个数")
+    @ApiModelProperty(name = "count", value = "验证码个数")
     private String count;
-    @ApiModelProperty(name="style",value = "样式")
+    @ApiModelProperty(name = "style", value = "样式")
     private String style;
 
     public String getWidth() {

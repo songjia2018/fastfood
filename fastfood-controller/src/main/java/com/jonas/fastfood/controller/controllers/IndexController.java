@@ -20,15 +20,10 @@ import java.io.IOException;
 @RequestMapping("/index")
 public class IndexController {
 
-    @ApiOperation(value = "获取验证码",notes = "无返回参数，直接回写图片流字节")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "width", value = "图片宽度", dataType = "string", paramType = "query"),
-            @ApiImplicitParam(name = "height", value = "图片高度", dataType = "string", paramType = "query"),
-            @ApiImplicitParam(name = "count", value = "验证码个数", dataType = "string", paramType = "query"),
-            @ApiImplicitParam(name = "style", value = "验证码样式", dataType = "string", paramType = "query")})
+    @ApiOperation(value = "获取验证码", notes = "无返回参数，直接回写图片流字节")
+    @ApiImplicitParams({@ApiImplicitParam(name = "width", value = "图片宽度", dataType = "string", paramType = "query"), @ApiImplicitParam(name = "height", value = "图片高度", dataType = "string", paramType = "query"), @ApiImplicitParam(name = "count", value = "验证码个数", dataType = "string", paramType = "query"), @ApiImplicitParam(name = "style", value = "验证码样式", dataType = "string", paramType = "query")})
     @GetMapping(value = {"/code"})
-    public void code(HttpServletResponse response, String width, String height,
-                     String count, String style) throws IOException {
+    public void code(HttpServletResponse response, String width, String height, String count, String style) throws IOException {
         SecurityCodeUtil.Code code = SecurityCodeUtil.generateCode(count, style, width, height);
 
         // 往 session 里面丢值

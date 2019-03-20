@@ -47,7 +47,7 @@ public class BackendWebBean {
         }
         return U.EMPTY;*/
         String loginSign = U.uuid();
-        cacheService.set(LOGIN_SIGN_PREFIX + userId, loginSign);
+        //cacheService.set(LOGIN_SIGN_PREFIX + userId, loginSign);
         return loginSign;
     }
 }

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jonas.fastfood.product.mapps.ProductMapper">
+    <resultMap id="BaseResultMap" type="com.jonas.fastfood.common.model.product.Product">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="prd_name" jdbcType="VARCHAR" property="prdName"/>
+        <result column="discreb" jdbcType="VARCHAR" property="discreb"/>
+        <result column="price" jdbcType="FLOAT" property="price"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, prd_name, discreb
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from fsfd_product
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from fsfd_product
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.jonas.fastfood.common.model.product.Product">
+        insert into fsfd_product (id, prd_name, discreb
+        )
+        values (#{id,jdbcType=INTEGER}, #{prdName,jdbcType=VARCHAR}, #{discreb,jdbcType=VARCHAR}
+        )
+    </insert>
+    <insert id="insertSelective" parameterType="com.jonas.fastfood.common.model.product.Product" useGeneratedKeys="true"
+            keyProperty="id">
+        insert into fsfd_product
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="prdName != null">
+                prd_name,
+            </if>
+            <if test="discreb != null">
+                discreb,
+            </if>
+            <if test="price != null">
+                price,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="prdName != null">
+                #{prdName,jdbcType=VARCHAR},
+            </if>
+            <if test="discreb != null">
+                #{discreb,jdbcType=VARCHAR},
+            </if>
+            <if test="price != null">
+                #{price,jdbcType=FLOAT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.jonas.fastfood.common.model.product.Product">
+        update fsfd_product
+        <set>
+            <if test="prdName != null">
+                prd_name = #{prdName,jdbcType=VARCHAR},
+            </if>
+            <if test="discreb != null">
+                discreb = #{discreb,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.jonas.fastfood.common.model.product.Product">
+        update fsfd_product
+        set prd_name = #{prdName,jdbcType=VARCHAR},
+        discreb = #{discreb,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>

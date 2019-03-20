@@ -23,32 +23,28 @@ public class BackendInterceptor implements HandlerInterceptor {
     }
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
-                             Object handler) throws Exception {
-        if(LogUtil.ROOT_LOG.isInfoEnabled()){
-            LogUtil.ROOT_LOG.info("***request url="+request.getRequestURL());
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        if (LogUtil.ROOT_LOG.isInfoEnabled()) {
+            LogUtil.ROOT_LOG.info("***request url=" + request.getRequestURL());
         }
         bindParam();
         String url = request.getRequestURL().toString();
         String requestUrl = request.getRequestURI().replace(request.getContextPath(), "");
         //过滤接口文档过来的请求
-        if(requestUrl.contains("swagger"))
-        {
+        if (requestUrl.contains("swagger")) {
             return true;
         }
-        checkLoginAndPermission(handler);
+        //checkLoginAndPermission(handler);
         return true;
     }
 
     @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response,
-                           Object handler, ModelAndView modelAndView) throws Exception {
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
 
     }
 
     @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response,
-                                Object handler, Exception ex) throws Exception {
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         if (ex != null) {
             if (LogUtil.ROOT_LOG.isErrorEnabled()) {
                 LogUtil.ROOT_LOG.error("request was over, but have exception: " + ex.getMessage());
@@ -59,9 +55,7 @@ public class BackendInterceptor implements HandlerInterceptor {
 
     private void bindParam() {
         // 打印日志上下文中的数据
-        LogUtil.RequestLogContext logContextInfo = RequestUtils.logContextInfo()
-                .setId(String.valueOf(BackendSessionUtil.getUserId()))
-                .setName(BackendSessionUtil.getUserName());
+        LogUtil.RequestLogContext logContextInfo = RequestUtils.logContextInfo().setId(String.valueOf(BackendSessionUtil.getUserId())).setName(BackendSessionUtil.getUserName());
         LogUtil.bind(logContextInfo);
     }
 

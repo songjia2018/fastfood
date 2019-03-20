@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 @EnableWebMvc
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
 @SpringBootApplication
 public class FastfoodControllerApplication extends WebMvcConfigurationSupport {
 
@@ -21,8 +21,7 @@ public class FastfoodControllerApplication extends WebMvcConfigurationSupport {
      */
     @Override
     public void configurePathMatch(PathMatchConfigurer configurer) {
-        configurer.setUseSuffixPatternMatch(false)
-                .setUseTrailingSlashMatch(true);
+        configurer.setUseSuffixPatternMatch(false).setUseTrailingSlashMatch(true);
     }
 
     public static void main(String[] args) {

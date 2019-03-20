@@ -36,12 +36,12 @@ public class BackendWebConfig extends WebMvcConfigurationSupport {
         return new VersionRequestMappingHandlerMapping();
     }
 
-   @Override
+    @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
-       registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
-       /**配置swagger2的资源目录**/
-       registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
-       registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        /**配置swagger2的资源目录**/
+        registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
     @Override
@@ -49,7 +49,7 @@ public class BackendWebConfig extends WebMvcConfigurationSupport {
         SpringMvc.handlerFormatter(registry);
     }
 
-   @Override
+    @Override
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
         SpringMvc.handlerConvert(converters);
     }

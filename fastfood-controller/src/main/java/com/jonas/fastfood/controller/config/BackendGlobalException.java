@@ -74,7 +74,7 @@ public class BackendGlobalException {
 
     @ExceptionHandler(NoHandlerFoundException.class)
     public ResponseEntity<JsonResult> noHandler(NoHandlerFoundException e) {
-       // bindAndPrintLog(e);
+        // bindAndPrintLog(e);
 
         String msg = String.format("没找到(%s %s)", e.getHttpMethod(), e.getRequestURL());
         return new ResponseEntity<>(JsonResult.notFound(msg), HttpStatus.NOT_FOUND);
@@ -101,7 +101,7 @@ public class BackendGlobalException {
 
     @ExceptionHandler(MaxUploadSizeExceededException.class)
     public ResponseEntity<JsonResult> uploadSizeExceeded(MaxUploadSizeExceededException e) {
-       // bindAndPrintLog(e);
+        // bindAndPrintLog(e);
 
         // 右移 20 位相当于除以两次 1024, 正好表示从字节到 Mb
         String msg = String.format("上传文件太大! 请保持在 %sM 以内", (e.getMaxUploadSize() >> 20));

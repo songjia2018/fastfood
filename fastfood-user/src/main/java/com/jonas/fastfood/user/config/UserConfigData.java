@@ -12,13 +12,9 @@ import org.springframework.core.io.Resource;
  */
 final class UserConfigData {
 
-    private static final String[] RESOURCE_PATH = new String[]{
-             "mapps/*.xml","mapps-custom/*.xml"
-    };
+    private static final String[] RESOURCE_PATH = new String[]{"mapps/*.xml", "mapps-custom/*.xml"};
     /**
      * 要加载的 mybatis 的配置文件目录
      */
-    static final Resource[] RESOURCE_ARRAY = CollectResourceUtil.resource(A.maps(
-            UserConfigData.class, RESOURCE_PATH
-    ));
+    static final Resource[] RESOURCE_ARRAY = CollectResourceUtil.resource(A.maps(UserConfigData.class, RESOURCE_PATH));
 }
